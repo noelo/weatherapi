@@ -1,1 +1,48 @@
-{"swagger":"2.0","info":{"title":"solar","description":"","version":"1.0.0"}}
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "solar",
+    "description": "Sample api to get details of the sun",
+    "license": {
+      "name": "MIT License",
+      "url": "https://opensource.org/licenses/MIT"
+    },
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/solar": {},
+    "/solar/sunrisesunset": {
+      "get": {},
+      "parameters": [
+        {
+          "name": "position",
+          "in": "query"
+        }
+      ]
+    }
+  },
+  "definitions": {
+    "suntimes": {
+      "properties": {
+        "rise": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "set": {
+          "format": "date-time",
+          "type": "string"
+        }
+      }
+    },
+    "position": {
+      "properties": {
+        "lat": {
+          "type": "string"
+        },
+        "lon": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
