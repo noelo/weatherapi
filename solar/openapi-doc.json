@@ -12,11 +12,40 @@
   "paths": {
     "/solar": {},
     "/solar/sunrisesunset": {
-      "get": {},
+      "get": {
+        "summary": "Get sun rise/set times",
+        "responses": {
+          "200": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "#/definitions/suntimes"
+              }
+            }
+          },
+          "400": {
+            "description": "Returned when lat/lon/period query parameters have invalid values"
+          }
+        }
+      },
       "parameters": [
         {
-          "name": "position",
-          "in": "query"
+          "name": "lat",
+          "in": "query",
+          "description": "latitude",
+          "type": "string"
+        },
+        {
+          "name": "lon",
+          "in": "query",
+          "description": "longitude ",
+          "type": "string"
+        },
+        {
+          "name": "period",
+          "in": "query",
+          "description": "time of what period in days (default 1, optional)",
+          "type": "integer"
         }
       ]
     }
