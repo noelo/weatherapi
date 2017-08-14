@@ -1,1 +1,15 @@
-{"swagger":"2.0","info":{"title":"weatherapi","description":"","version":"1.0.0"}}
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "weatherapi",
+    "description": "",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/weather": {},
+    "/weather/temp/current": {},
+    "/weather/temp/weekrange": {},
+    "/weather/forecast/day": {},
+    "/weather/forecast/7days": {}
+  }
+}
