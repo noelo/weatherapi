@@ -14,8 +14,10 @@
     "/solar/sunrisesunset": {
       "get": {
         "summary": "Get sun rise/set times",
+        "description": "Returns a array of sun rise/set times",
         "responses": {
           "200": {
+            "description": "Successful invocation",
             "schema": {
               "type": "array",
               "items": {
